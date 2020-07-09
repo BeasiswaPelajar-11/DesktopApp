@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="586.0" prefWidth="657.0" style="-fx-background-color: #49beb7;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beasiswapelajar.DashboardController">
+   <stylesheets>
+      <URL value="@../../../../Proyek/BeasiswaPelajar/src/dashboard.css" />
+   </stylesheets>
+   <children>
+      <Label layoutY="-3.0" prefHeight="68.0" prefWidth="669.0" style="-fx-background-color: #222831;" text="   Beasiswa Pelajar" textFill="WHITE">
+         <font>
+            <Font name="Georgia Bold" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="22.0" layoutY="87.0" prefHeight="200.0" prefWidth="624.0">
+         <columns>
+            <TableColumn fx:id="t_nama" prefWidth="149.0" text="Nama" />
+            <TableColumn fx:id="t_deskripsi" prefWidth="309.0" text="Deskripsi" />
+            <TableColumn fx:id="t_nominal" prefWidth="165.0" text="Nominal (Rp)" />
+            <TableColumn fx:id="t_id" prefWidth="165.0" text="Nominal (Rp)" />
+         </columns>
+      </TableView>
+      <Label layoutX="22.0" layoutY="309.0" prefHeight="39.0" prefWidth="624.0" style="-fx-background-color: #ee8572;" text="                                                         Penambahan / Update Beasiswa" textFill="WHITE">
+         <font>
+            <Font name="Georgia Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nama" layoutX="25.0" layoutY="380.0" prefHeight="25.0" prefWidth="507.0" promptText="Nama" />
+      <TextField fx:id="deskripsi" layoutX="25.0" layoutY="422.0" prefHeight="25.0" prefWidth="507.0" promptText="Deskripsi" />
+      <TextField fx:id="nominal" layoutX="25.0" layoutY="463.0" prefHeight="25.0" prefWidth="507.0" promptText="Nominal" />
+      <Button layoutX="566.0" layoutY="379.0" mnemonicParsing="false" onAction="#tambahBeasiswa" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #feb72b;" text="Tambah">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="566.0" layoutY="422.0" mnemonicParsing="false" onAction="#updateBeasiswa" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #feb72b;" text="Edit">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="566.0" layoutY="462.0" mnemonicParsing="false" onAction="#hapusBeasiswa" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #feb72b;" text="Hapus">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Line endX="570.0" layoutX="99.0" layoutY="522.0" startX="-100.0" />
+      <Button fx:id="reset" layoutX="22.0" layoutY="537.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #feb72b;" text="Reset">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="110.0" layoutY="537.0" mnemonicParsing="false" onAction="#refresh" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #feb72b;" text="Refresh">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TextField fx:id="id" editable="false" layoutX="15.0" layoutY="431.0" mouseTransparent="true" opacity="0.0" prefHeight="10.0" prefWidth="0.0" promptText="Nominal" />
+      <Button fx:id="btnlogout" layoutX="573.0" layoutY="18.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #ffcb74;" text="Logout">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="exit" layoutX="490.0" layoutY="18.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #ffcb74;" text="Exit">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
